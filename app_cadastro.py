@@ -21,14 +21,14 @@ cursor.execute('''
 conn.commit()
 conn.close()
 
-# FRAMES PARA TROCAR DE TELA
+# Navegação entre frames
 frame_cadastro = tk.Frame(janela)
 frame_visualizacao = tk.Frame(janela)
 
 for frame in (frame_cadastro, frame_visualizacao):
     frame.grid(row=0, column=0, sticky='nsew')
 
-# FUNÇÕES
+# Funções de navegação e manipulação de dados
 def cadastrar_produto():
     nome = entrada_nome.get()
     preco = entrada_preco.get()
@@ -76,9 +76,8 @@ def mostrar_ajuda():
         "💡 Descrição: Aplicação simples com interface Tkinter e banco SQLite para cadastrar e visualizar venda de produtos."
     )
     messagebox.showinfo("Ajuda", mensagem)
-# --------------------------------
 
-# ----------- MENU -----------
+# Menu de navegação
 menu_barra = tk.Menu(janela)
 
 menu_navegacao = tk.Menu(menu_barra, tearoff=0)
@@ -91,9 +90,8 @@ menu_ajuda.add_command(label="Sobre", command=mostrar_ajuda)
 menu_barra.add_cascade(label="Ajuda", menu=menu_ajuda)
 
 janela.config(menu=menu_barra)
-# -----------------------------
 
-# --------- TELA DE CADASTRO ---------
+# Tela de cadastro de produtos
 tk.Label(frame_cadastro, text="Nome do Produto:").grid(row=0, column=0, padx=10, pady=10, sticky="w")
 entrada_nome = tk.Entry(frame_cadastro, width=30)
 entrada_nome.grid(row=0, column=1, padx=10, pady=10)
@@ -108,16 +106,14 @@ entrada_quantidade.grid(row=2, column=1, padx=10, pady=10)
 
 botao_cadastrar = tk.Button(frame_cadastro, text="Cadastrar Produto", command=cadastrar_produto)
 botao_cadastrar.grid(row=3, column=1, pady=20, sticky="e")
-# -----------------------------------
 
-# ------- TELA DE VISUALIZAÇÃO -------
+# Tela de visualização de produtos
 tree = ttk.Treeview(frame_visualizacao, columns=("ID", "Nome", "Preço", "Quantidade"), show="headings")
 tree.heading("ID", text="ID")
 tree.heading("Nome", text="Nome")
 tree.heading("Preço", text="Preço")
 tree.heading("Quantidade", text="Quantidade")
 tree.pack(fill="both", expand=True, padx=10, pady=10)
-# -------------------------------------
 
 # Mostrar tela de cadastro ao iniciar
 mostrar_frame(frame_cadastro)
