@@ -29,3 +29,10 @@ Este projeto é uma aplicação de desktop simples desenvolvida em **Python** co
 ├── app_cadastro.py         # Código-fonte principal da aplicação
 ├── cadastro.db             # Banco de dados SQLite
 └── README.md               # Documentação do projeto
+
+---
+
+## 📸 Funcionamento da Aplicação
+
+![Interface de cadastro](capturas_de_tela/interface_de_cadastro.png)
+![Armazenamento em banco de dados](capturas_de_tela/banco_de_dados.png)
