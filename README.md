@@ -2,6 +2,11 @@
 
 Este projeto é uma aplicação de desktop simples desenvolvida em **Python** como parte de uma atividade da disciplina Desenvolvimento Rápido de Aplicações em Python lecionada pelo professor Alex Cunha. Usamos **Tkinter** para a interface gráfica e **SQLite** para o armazenamento dos dados. O objetivo é permitir o cadastro de produtos e o registro de vendas de forma prática e intuitiva.
 
+**Aluno:** Pedro Henrique Alves da Silva
+**Matrícula:** 202403780054
+
+**Observação:** Faltei à aula em que a atividade foi proposta e não pude formar grupo. Minhas sinceras desculpas, favor, peço que considere.
+
 ---
 
 ## 🚀 Funcionalidades
